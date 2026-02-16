@@ -20,7 +20,6 @@ setup(
     maintainer='loan',
     maintainer_email='loan@todo.todo',
     description='GUI teleoperation for BlueROV2',
-    license='MIT',
     extras_require={
         'test': [
             'pytest',

@@ -5,7 +5,6 @@
   <version>0.1.0</version>
   <description>GUI teleoperation for BlueROV2</description>
   <maintainer email="loan@todo.todo">loan</maintainer>
-  <license>MIT</license>
 
   <depend>rclpy</depend>
   <depend>geometry_msgs</depend>

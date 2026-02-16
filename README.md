@@ -97,26 +97,9 @@ ros2 launch bluerov2_gui_teleop gui_teleop_launch.py buoyancy_compensation:=-5.0
 
 ## Topics
 
-### Published Topics
-
-- **`/{namespace}/wrench`** (`geometry_msgs/Wrench`)
-  - Force commands: `force.x` (surge), `force.y` (sway), `force.z` (heave)
-  - Torque commands: `torque.z` (yaw)## Parameters
-
-- `namespace`: Vehicle namespace (default: bluerov2)
-- `depth_sign`: Depth sign convention (default: -1)
-- `show_gui`: Show GUI window (default: True)
-- `buoyancy_compensation`: Compensation force in N (default: -15.0)
-
-## Topics
-
 **Published:**
-- `/{namespace}/wrench` (geometry_msgs/Wrench)
+- `/{namespace}/wrench` (geometry_msgs/Wrench) - Control commands
 
 **Subscribed:**
-- `/{namespace}/odom` (nav_msgs/Odometry)
-- `/{namespace}/image` (sensor_msgs/Image)
-
-## License
-
-MIT
+- `/{namespace}/odom` (nav_msgs/Odometry) - Position and velocity feedback
+- `/{namespace}/image` (sensor_msgs/Image) - Camera feed
