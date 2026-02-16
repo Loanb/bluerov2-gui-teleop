@@ -2,6 +2,8 @@
 
 ROS2 package for controlling BlueROV2 with GUI interface, camera feed and telemetry.
 
+![GUI Screenshot](docs/gui_screenshot.PNG)
+
 ## Features
 
 - GUI control interface with clickable buttons
@@ -23,12 +25,39 @@ Keyboard shortcuts (optional):
 - **P**: Arm/Disarm, **Space**: Stop
 - **ZQSD**: Move, **RF**: Up/Down, **AE**: Rotate
 
+## Prerequisites
+
+This package requires the following ROS2 packages:
+
+```bash
+cd ~/ros2_ws/src
+
+# BlueROV2 simulation and control
+git clone https://github.com/CentraleNantesROV/bluerov2.git
+
+# Thruster allocation
+git clone https://github.com/CentraleNantesROV/thruster_manager
+
+# AUV control (PID controllers)
+git clone https://github.com/CentraleNantesROV/auv_control
+
+# Pose to TF broadcaster
+git clone https://github.com/oKermorgant/pose_to_tf
+```
+
 ## Install
+
+Install Python dependencies:
 
 ```bash
 pip3 install opencv-python pillow pynput
+```
+
+Build the workspace:
+
+```bash
 cd ~/ros2_ws
-colcon build --packages-select bluerov2_gui_teleop
+colcon build
 source install/setup.bash
 ```
 
